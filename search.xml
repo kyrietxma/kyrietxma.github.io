@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何利用IDEA上传项目到Github]]></title>
+    <url>%2Fkyriemtx.github.io%2F2019%2F03%2F14%2FIDEA%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E5%88%B0Github%2F</url>
+    <content type="text"><![CDATA[第一种情况： 新的项目第一次推送到Github步骤：① 选择 share project on Github② 添加仓库名，添加描述③ 选择你要放到GitHub上的文件（大部分是选择你修改过的文件，但是本次我是第一次发布项目，所以全选）④ 显示上传成功⑤ 登录个人GitHub账号，查看项目 第二种情况：GitHub中已经有了项目，在IDEA中修改了项目中的代码，更新GitHub中的代码 ① 修改代码： 对于修改了的代码，IDEA会自动显示为不同颜色，比如新建的文件，文件名显示红色；修改了已有文件中的代码，被修改部分显示绿色② 修改完代码后，重新上传代码： 在项目上传的过程中，我们遵从添加到本地仓库–&gt;提交和推到远程仓库的步骤 A 添加到本地仓库： 右键项目名，选择Git,点击Add:添加项目到本地仓库，具体步骤如下图： 成功添加到本地仓库： B 提交并推送代码到远程仓库： 右键项目名，选择Git，点击Commit directory 具体操作如下： ③ 在个人GitHub中查看项目的更新情况 代码更新成功！！至此，关于使用IDEA上传代码的操作已经完成。]]></content>
+      <tags>
+        <tag>GitHub  IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[批量查询全过程]]></title>
-    <url>%2Fkyriemtx.github.io%2F2019%2F01%2F27%2F%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B%EF%BC%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%89%2F</url>
+    <url>%2Fkyriemtx.github.io%2F2019%2F03%2F13%2F%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B%EF%BC%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%89%2F</url>
     <content type="text"><![CDATA[具体步骤如下：1 controller层（查询开始的接口） ① 调用UserService查询用户列表 ② 调用RoleService查询当前用户所拥有的角色list123456789101112131415@RequestMapping(&quot;listUser&quot;) public String list(Model model) &#123; //查询用户 List&lt;User&gt; user = userService.list(); model.addAttribute(&quot;user&quot;, user); //用户角色对应map Map&lt;User, List&lt;Role&gt;&gt; user_roles = new HashMap&lt;&gt;(); for (User user : user) &#123; //获得当前用户所拥有的角色list List&lt;Role&gt; roles = roleService.listRoles(user); user_roles.put(user, roles); &#125; model.addAttribute(&quot;user_roles&quot;, user_roles); return &quot;listUser&quot;; &#125; 2 调用UserService查询用户，返回一个用户list，具体实现在它的实现层中，代码如下：① 调用UserMapper层从数据库进行查询123456789@Override public List&lt;User&gt; list() &#123; //相当于用户的一个工具类，设置查询结果list的排序规则 UserExample example = new UserExample(); //当前查询到的用户按降序排序 example.setOrderByClause(&quot;id desc&quot;); return userMapper.selectByExample(example); &#125; 3 UserMapper层的方法如下：返回一个用户list 1List&lt;User&gt; selectByExample(UserExample example); 4 UserMapper.xml具体如下： 123456789101112131415&lt;select id=&quot;selectByExample&quot; parameterType=&quot;com.how2java.pojo.UserExample&quot; resultMap=&quot;BaseResultMap&quot;&gt; select &lt;if test=&quot;distinct&quot;&gt; distinct &lt;/if&gt; &apos;false&apos; as QUERYID, &lt;include refid=&quot;Base_Column_List&quot; /&gt; from user &lt;if test=&quot;_parameter != null&quot;&gt; &lt;include refid=&quot;Example_Where_Clause&quot; /&gt; &lt;/if&gt; &lt;if test=&quot;orderByClause != null&quot;&gt; order by $&#123;orderByClause&#125; &lt;/if&gt; &lt;/select&gt;]]></content>
       <tags>
         <tag>批量查询</tag>
@@ -10,7 +18,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <url>%2Fkyriemtx.github.io%2F2019%2F01%2F27%2Fhello-world%2F</url>
+    <url>%2Fkyriemtx.github.io%2F2019%2F03%2F13%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
