@@ -3,11 +3,11 @@
   <title>kyrie.德鲁大叔</title>
   
   <subtitle>千里之行始于足下，世间最难能可贵的就是坚持！！！！</subtitle>
-  <link href="/kyriemtx.github.io/atom.xml" rel="self"/>
+  <link href="/kyrietxma.github.io/atom.xml" rel="self"/>
   
-  <link href="https://github.com/kyriemtx/kyriemtx.github.io/"/>
-  <updated>2019-03-13T19:32:42.556Z</updated>
-  <id>https://github.com/kyriemtx/kyriemtx.github.io/</id>
+  <link href="https://github.com/kyrietxma/kyrietxma.github.io/"/>
+  <updated>2019-03-13T22:05:02.853Z</updated>
+  <id>https://github.com/kyrietxma/kyrietxma.github.io/</id>
   
   <author>
     <name>Kyriematx</name>
@@ -17,9 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HTML文件怎么引入高德地图</title>
+    <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/03/14/HTML%E6%96%87%E4%BB%B6%E6%80%8E%E4%B9%88%E5%BC%95%E5%85%A5%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE/"/>
+    <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/03/14/HTML文件怎么引入高德地图/</id>
+    <published>2019-03-13T22:02:49.295Z</published>
+    <updated>2019-03-13T22:05:02.853Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.首先，注册高德地图开发者，这个直接在官网上注册，输入必要信息就行，如下：<br><img src="https://img-blog.csdnimg.cn/20190314055509733.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>2.注册完成后，进入个人中心，依次点击“应用管理”-&gt;“我的应用”-&gt;“创建新应用”，如下，这里输入应用名称，选择类型就行：</p><p><img src="https://img-blog.csdnimg.cn/2019031405571790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3 接着就需要为应用添加key值，点击右上角的+号，就会弹出添加窗口，这里我们选择“Web端（JS API）”，如下：<br><img src="https://img-blog.csdnimg.cn/2019031405574890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>4 添加key值成功后，就会在应用列表中看到刚才添加的key值，如下，后面的代码中需要用到这个key值：<br><img src="https://img-blog.csdnimg.cn/20190314055818185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>5.最后就是编写代码，在html页面中引入3D地图了，如下，代码很简单，主要是创建div容器，然后通过JS引入地图到这个容器中，这里需要JS API版本在1.4.0以上，指定地图模式为3D，key值替换成自己应用的key值：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no, width=device-width&quot;&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css&quot; /&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        html,</span><br><span class="line">        body,</span><br><span class="line">        #container &#123;</span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 100%;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;title&gt;地图加载完成&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;script src=&quot;https://webapi.amap.com/maps?v=1.4.13&amp;key=你的key值&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var map = map = new AMap.Map(&apos;container&apos;, &#123;</span><br><span class="line">        resizeEnable: true,</span><br><span class="line">        viewMode:&apos;3D&apos;</span><br><span class="line">    &#125;);</span><br><span class="line">    map.on(&quot;complete&quot;, function()&#123;</span><br><span class="line">        log.success(&quot;地图加载完成！&quot;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><p>6 浏览效果如图：<br><img src="https://img-blog.csdnimg.cn/20190314060242123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.首先，注册高德地图开发者，这个直接在官网上注册，输入必要信息就行，如下：&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20190314055509733.png?x-oss-process=image/watermark,type_
+      
+    
+    </summary>
+    
+    
+      <category term="JS 高德地图" scheme="https://github.com/kyrietxma/kyrietxma.github.io/tags/JS-%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何利用IDEA上传项目到Github</title>
-    <link href="https://github.com/kyriemtx/kyriemtx.github.io/2019/03/14/IDEA%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E5%88%B0Github/"/>
-    <id>https://github.com/kyriemtx/kyriemtx.github.io/2019/03/14/IDEA上传项目到Github/</id>
+    <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/03/14/IDEA%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E5%88%B0Github/"/>
+    <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/03/14/IDEA上传项目到Github/</id>
     <published>2019-03-13T19:23:31.102Z</published>
     <updated>2019-03-13T19:32:42.556Z</updated>
     
@@ -35,14 +58,14 @@
     </summary>
     
     
-      <category term="GitHub  IDEA" scheme="https://github.com/kyriemtx/kyriemtx.github.io/tags/GitHub-IDEA/"/>
+      <category term="GitHub  IDEA" scheme="https://github.com/kyrietxma/kyrietxma.github.io/tags/GitHub-IDEA/"/>
     
   </entry>
   
   <entry>
     <title>批量查询全过程</title>
-    <link href="https://github.com/kyriemtx/kyriemtx.github.io/2019/03/13/%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B%EF%BC%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%89/"/>
-    <id>https://github.com/kyriemtx/kyriemtx.github.io/2019/03/13/批量查询的全过程（学习笔记）/</id>
+    <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/03/13/%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B%EF%BC%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%89/"/>
+    <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/03/13/批量查询的全过程（学习笔记）/</id>
     <published>2019-03-13T09:46:36.142Z</published>
     <updated>2019-01-16T08:48:46.000Z</updated>
     
@@ -58,14 +81,14 @@
     </summary>
     
     
-      <category term="批量查询" scheme="https://github.com/kyriemtx/kyriemtx.github.io/tags/%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2/"/>
+      <category term="批量查询" scheme="https://github.com/kyrietxma/kyrietxma.github.io/tags/%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/kyriemtx/kyriemtx.github.io/2019/03/13/hello-world/"/>
-    <id>https://github.com/kyriemtx/kyriemtx.github.io/2019/03/13/hello-world/</id>
+    <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/03/13/hello-world/"/>
+    <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/03/13/hello-world/</id>
     <published>2019-03-13T09:46:36.129Z</published>
     <updated>2017-10-28T00:39:58.000Z</updated>
     
@@ -85,8 +108,8 @@
   
   <entry>
     <title>shiro学习记录</title>
-    <link href="https://github.com/kyriemtx/kyriemtx.github.io/2019/01/16/shiro%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>https://github.com/kyriemtx/kyriemtx.github.io/2019/01/16/shiro学习记录（二）/</id>
+    <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/01/16/shiro%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/01/16/shiro学习记录（二）/</id>
     <published>2019-01-16T08:45:28.000Z</published>
     <updated>2019-01-16T08:47:50.000Z</updated>
     
@@ -102,14 +125,14 @@
     </summary>
     
     
-      <category term="个人学习笔记" scheme="https://github.com/kyriemtx/kyriemtx.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="个人学习笔记" scheme="https://github.com/kyrietxma/kyrietxma.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>springboot项目使用mybatis逆向工程生成代码</title>
-    <link href="https://github.com/kyriemtx/kyriemtx.github.io/2019/01/14/springboot%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8mybatis%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81/"/>
-    <id>https://github.com/kyriemtx/kyriemtx.github.io/2019/01/14/springboot项目使用mybatis逆向工程生成代码/</id>
+    <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/01/14/springboot%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8mybatis%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81/"/>
+    <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/01/14/springboot项目使用mybatis逆向工程生成代码/</id>
     <published>2019-01-14T07:56:28.000Z</published>
     <updated>2019-01-16T08:50:54.000Z</updated>
     
@@ -129,14 +152,14 @@
     </summary>
     
     
-      <category term="个人笔记" scheme="https://github.com/kyriemtx/kyriemtx.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/"/>
+      <category term="个人笔记" scheme="https://github.com/kyrietxma/kyrietxma.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>个人github练习</title>
-    <link href="https://github.com/kyriemtx/kyriemtx.github.io/2019/01/09/%E4%B8%AA%E4%BA%BAgithub%E7%BB%83%E4%B9%A0/"/>
-    <id>https://github.com/kyriemtx/kyriemtx.github.io/2019/01/09/个人github练习/</id>
+    <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/01/09/%E4%B8%AA%E4%BA%BAgithub%E7%BB%83%E4%B9%A0/"/>
+    <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/01/09/个人github练习/</id>
     <published>2019-01-09T08:14:00.000Z</published>
     <updated>2019-01-09T08:15:14.000Z</updated>
     
@@ -145,14 +168,14 @@
     </summary>
     
     
-      <category term="是不是跟github链接" scheme="https://github.com/kyriemtx/kyriemtx.github.io/tags/%E6%98%AF%E4%B8%8D%E6%98%AF%E8%B7%9Fgithub%E9%93%BE%E6%8E%A5/"/>
+      <category term="是不是跟github链接" scheme="https://github.com/kyrietxma/kyrietxma.github.io/tags/%E6%98%AF%E4%B8%8D%E6%98%AF%E8%B7%9Fgithub%E9%93%BE%E6%8E%A5/"/>
     
   </entry>
   
   <entry>
     <title>你好，2019</title>
-    <link href="https://github.com/kyriemtx/kyriemtx.github.io/2019/01/09/%E4%BD%A0%E5%A5%BD%EF%BC%8C2019/"/>
-    <id>https://github.com/kyriemtx/kyriemtx.github.io/2019/01/09/你好，2019/</id>
+    <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/01/09/%E4%BD%A0%E5%A5%BD%EF%BC%8C2019/"/>
+    <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/01/09/你好，2019/</id>
     <published>2019-01-09T07:56:28.000Z</published>
     <updated>2019-01-09T07:57:20.000Z</updated>
     
@@ -161,7 +184,7 @@
     </summary>
     
     
-      <category term="你好，2019 新的一年，要有新的成长" scheme="https://github.com/kyriemtx/kyriemtx.github.io/tags/%E4%BD%A0%E5%A5%BD%EF%BC%8C2019-%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%EF%BC%8C%E8%A6%81%E6%9C%89%E6%96%B0%E7%9A%84%E6%88%90%E9%95%BF/"/>
+      <category term="你好，2019 新的一年，要有新的成长" scheme="https://github.com/kyrietxma/kyrietxma.github.io/tags/%E4%BD%A0%E5%A5%BD%EF%BC%8C2019-%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%EF%BC%8C%E8%A6%81%E6%9C%89%E6%96%B0%E7%9A%84%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
