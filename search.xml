@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何利用IDEA上传项目到Github]]></title>
+    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F29%2FLinux%2050%E6%9D%A1%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[1.ls -a 列出当前目录下的所有文件，包括以.头的隐含文件（如～/.bashrc） ls –l 列出当前目录下文件的详细信息 pwd 查看当前所在目录的绝对路经 cd 目录之间的移动 mkdir目录名 创建一个目录 rm 文件名 删除一个文件 cat文件名 查看文件内容（全屏查看） 7.more文件名 查看文件内容（可左右移动） less文件名查看文件内容（可上下左右移动） 9.mv 路径 文件名 把文件移动到路径下 mv文件名 文件名改名 grep字符文件名根据字符匹配来查看文件部分内容 find 路经 -name “字符串” 查找路经所在范围内满足字符串匹配的文件和目录 12.ln 源文件 链接名 创建源文件的硬链接 ln -s源文件 链接名创建源文件的软链接 13.touch 文件名 建立文件 14.df 显示文件系统的总容量，使用量，剩余量 15.du -b /home 查看目前/HOME目录的容量(k)及子目录的容量(k) fdisk -l 查看系统分区信息 mount -t 文件系统类型 设备路经 访问路经 18.chmod *** 文件名 改文件的写读执行权限 19.diff 文件名 文件名 比较文件 20.top 动态 ps –aux 静态 pstree 进程树查看系统进程 程序名 &amp; 后台运行程序 fg 把后台运行的进程调回前台 bg 把前台运行进程调到后台 halt init 0 shutdown –h now 关闭系统 reboot init 6 重启系统 init [0123456] 改变系统运行级,7种 at at 5pm + 3 days /bin/ls 指定三天后下午5:00执行/bin/ls crontab 周期性任务命令（建议详细学习） 27.date 显示日期的命令 28.cal 显示日历的命令 29.bc 不错的简单计算器 30.man 命令 查询命令帮助 31.which 查看可执行档案的位置 32.whereis 查看档案的位置 33.locate 配合数据库查看档案位置 34.gzip bzip2 compress 压缩，解压命令 35.vi 文件名 用VI编辑文件 36.alias 命令别名设置指令 unalias 释放别名 37.tar 打包 解包指令 38.head 显示文件的头几行 tail 显示文件的后几行 39.| 管道 &gt; 重定向 40.od 以二进制形式读取档案的内容 41.su 登入超级管理员 sudo 以管理者身份执行命令 42.tar包安装指令 ./configure –prefix=/usr/local 编译前的配置 make 编译 make install 安装编译好的源码包 43.rpm –参数 rpm的安装 查询 删除 升级等 44.ifconfig 网络配置命令 ping ping目标主机 netstat 显示监听端口及进程 45.clear 清屏 46.useradd 加用户 47.passwd 修改密码 48.chgrp chown 修改文件的用户组所有者 49.dd 用来备份的指令 dd if=”input-file” of=”output-file” 50.sh 脚本文件 执行脚本文件]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[IntelliJ IDEA下载安装配置教程（自用配置）]]></title>
-    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F27%2FIntelliJ%20IDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E8%87%AA%E7%94%A8%E9%85%8D%E7%BD%AE%EF%BC%89%2F</url>
+    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F29%2FIntelliJ%20IDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B%EF%BC%88%E8%87%AA%E7%94%A8%E9%85%8D%E7%BD%AE%EF%BC%89%2F</url>
     <content type="text"><![CDATA[1 下载 IDEA IDEA官网2 安装IDEA 3 配置IDEA(重点) ① 配置默认jdk版本② 设置按钮的具体设置③ 设置默认字体和字体大小④设置注解颜色⑤设置文件默认编码格式 4 关闭IDEA自动更新 在File-&gt;Settings-&gt;Appearance &amp; Behavior-&gt;System Settings-&gt;Updates下取消Automatically check updates for勾选 5 隐藏.idea文件夹和.iml等文件IntelliJ IDEA项目会自动生成一个.idea文件夹和.iml文讲，看着实在是碍眼，所以对以上文件进行隐藏处理在File-&gt;Settings-&gt;Editor-&gt;File Types下的”Ignore files and folders”一栏添加 .idea;.iml;等配置如下图所示6 类和方法注释模板 ①修改类注释模板 在File-&gt;Settings-&gt;Editor-&gt;File and Code Templates下分别修改Class，Interface，Enum等注释模板，Class模板部分修改如下，其余的举一反三进行修改。以下所示的${DESCRIPTION}是自定义变量，会在创建类时请求输入 ②修改方法注释模板 在File-&gt;Settings-&gt;Editor-&gt;Live Templates下添加自定义Template Group，并在自定义Template Group下添加自定义Template，具体配置如下图所示 说明：在完成如上配置后，只需在方法内执行/**+Enter键即可生成注释，切记这里说的是方法内部，因为methodParameters()的作用域只在方法内部 7 代码格式化代码格式化的快捷键为Ctrl+Alt+L，如果在类中执行代码格式化则会对代码进行排版，若焦点在类或者文件夹上，则会弹出格式化选项提示框，弹出框如下图所示:Include subdirectories:是否对子目录也进行格式化Optimize imports:优化导入的类和包Rearrange enries:对代码顺序进行调整(将Filed放在Method前边) Filters即配置过滤条件，表示对哪些文件进行格式化 8 自动导入包在Intellij IDEA一次只能导入单个包，没有像Eclipse快速导入包的快捷键Ctrl+Shift+O，但是Intellij IDEA下有个自动导入包的功能。在File-&gt;Settings-&gt;Editor-&gt;General-&gt;Auto Import下进行配置，具体配置如下如所示: 9 Maven配置在File-&gt;Settings-&gt;Build,Execution,Deployment-&gt;Build Tools-&gt;Maven下对Maven进行配置，个人配置如下图所*注意：Import Maven projects automatically:表示IntelliJ IDEA会实时监控项目的pom.xml文件进行项目变动设置，建议进行勾选10 复用eclipse的快捷键 11编辑器每次打开新项目的时候 12实用插件推荐 快捷键提示插件Key promoter是在你通过非快捷键方式使用某功能时 为你提供快捷键建议 在开始记不住快捷键的情况下 强烈推荐安装 翻译插件翻译插件 TranslationPlugin,支持支持中英互译、单词朗读,详细安装文档请参考:TranslationPlugin介绍与安装手册 热部署插件JRebelJRebel热部署插件安装和使用请参考:JRebel热部署插件安装和使用 Maven HelperMaven 辅助插件 用于查找Maven依赖冲突非常好用的一款插件 安装步骤请参考:Maven Helper安装使用 Properties to YAML Converter在开发SpringBoot项目时，会需要把Properties的配置格式改为 YAML格式，Properties to YAML Converter提供了很好的支持 阿里巴巴代码规范插件p3c-pmd详细安装和使用请参考:阿里巴巴代码规范插件p3c-pmd 开发必备快捷键IntelliJ IDEA提供了丰富的快捷键组合来加快开发效率，但是快捷键太多琳琅满目也会给人无从下手的感觉。下面是我个人整理的在开发过程中必备的快捷键，(注:IDEA快捷键可能会与其他软件快捷键产生冲突，在开发过程中有必要进行取舍)此外IntelliJ IDEA 官方提供了学习IDEA快捷键的一个插件:IDE Features Trainer:https://plugins.jetbrains.com/plugin/8554?pr=idea，大家可以自行去插件库下载学习 Ctrl相关快捷键 介绍Ctrl + B 进入光标所在的方法/变量的接口或是定义处，等效于Ctrl + 左键单击Ctrl + D 复制光标所在行或复制选择内容，并把复制内容插入光标位置下面Ctrl + F 在当前文件进行文本查找Ctrl + H 查看类的继承结构Ctrl + N 通过类名定位文件Ctrl + O 快速重写父类方法Ctrl + P 方法参数提示Ctrl + Y 删除光标所在行或删除选中的行Ctrl + W 递进式选择代码块Ctrl + Z 撤销Ctrl + 1,2,3…9 定位到对应数值的书签位置 结合Ctrl + Shift + 1,2,3…9使用Ctrl + F1 在光标所在的错误代码出显示错误信息Ctrl + F12 弹出当前文件结构层，可以在弹出的层上直接输入进行筛选Ctrl + Space 基础代码补全默认在Windows系统上被输入法占用，需要进行修改，建议修改为Ctrl + 逗号Ctrl + / 注释光标所在行代码，会根据当前不同文件类型使用不同的注释符号 Alt相关快捷键 介绍Alt + Q 弹出一个提示，显示当前类的声明/上下文信息Alt + Enter 根据光标所在问题，提供快速修复选择 Shift相关快捷键 介绍Shift + F3 在查找模式下，定位到上一个匹配处Ctrl+Alt相关快捷键 介绍Ctrl + Alt + B 在某个调用的方法名上使用会跳到具体的实现处Ctrl + Alt + L 格式化代码 可以对当前文件和整个包目录使用Ctrl + Alt + M 快速抽取方法Ctrl + Alt + O 优化导入的类和包 可以对当前文件和整个包目录使用Ctrl + Alt + T 对选中的代码弹出环绕选项弹出层Ctrl + Alt + V 快速引进变量Ctrl + Alt + F7 寻找类或是变量被调用的地方，以弹出框的方式显示Ctrl + Alt + 左方向键 退回到上一个操作的地方Ctrl + Alt + 右方向键 前进到上一个操作的地方 Ctrl+Shift相关快捷键 介绍Ctrl + Shift + F 根据输入内容查找整个项目或指定目录内文件Ctrl + Shift + H 查看方法的继承结构Ctrl + Shift + J 自动将下一行合并到当前行末尾Ctrl + Shift + N 通过文件名定位打开文件/目录，打开目录需要在输入的内容后面多加一个正斜杠Ctrl + Shift + R 根据输入内容替换对应内容，范围为整个项目或指定目录内文件Ctrl + Shift + U 对选中的代码进行大/小写轮流转换Ctrl + Shift + W 递进式取消选择代码块Ctrl + Shift + Z 取消撤销Ctrl + Shift + / 代码块注释Ctrl + Shift + + 展开所有代码Ctrl + Shift + - 折叠所有代码Ctrl + Shift + 1,2,3…9 快速添加指定数值的书签Ctrl + Shift + F7 高亮显示所有该选中文本，按Esc高亮消失Ctrl + Shift + Space 智能代码提示Ctrl + Shift + Enter 自动结束代码，行末自动添加分号 其他快捷键 介绍F2 跳转到下一个高亮错误或警告位置F3 在查找模式下，定位到下一个匹配处F4 编辑源]]></content>
       <tags>
         <tag>IDEA</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[使用Navicat premium 12画ER图的几种操作方法]]></title>
-    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F26%2F%E4%BD%BF%E7%94%A8Navicat%20premium%2012%E7%94%BBER%E5%9B%BE%E7%9A%84%E5%87%A0%E7%A7%8D%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[最近接触的关系数据库类型比较多，所以用上了 Navicat Premium。这个工具真的很强大，可以连接大多数关系数据库。再也不用来回切换数据库连接工具了。同时这个工具可以直接直观的查看几个表的ER图，即关联关系，便于设计模型。言归正传介绍方法。实验工具为 Navicat ，具体操作如下： 第一种： 1 模型–&gt; 新建模型2 选择相应的数据库名称和数据库版本，点击确定 如下：3 点击工具–&gt;从数据库导入，选择你需要建立关系的数据表，点击开始4 生成ER图，如下： 第二种：1 选择目标数据库名或者具体的某一张数据表，右键单击，选择逆向表到模型（选择的是userinfo表） 2 点击工具–&gt;从数据库导入，选择你需要建立关系的数据表，点击开始3 生成ER图，如下：]]></content>
+    <title><![CDATA[HTML文件怎么引入高德地图]]></title>
+    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F29%2FHTML%E6%96%87%E4%BB%B6%E6%80%8E%E4%B9%88%E5%BC%95%E5%85%A5%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[1.首先，注册高德地图开发者，这个直接在官网上注册，输入必要信息就行，如下：2.注册完成后，进入个人中心，依次点击“应用管理”-&gt;“我的应用”-&gt;“创建新应用”，如下，这里输入应用名称，选择类型就行： 3 接着就需要为应用添加key值，点击右上角的+号，就会弹出添加窗口，这里我们选择“Web端（JS API）”，如下：4 添加key值成功后，就会在应用列表中看到刚才添加的key值，如下，后面的代码中需要用到这个key值：5.最后就是编写代码，在html页面中引入3D地图了，如下，代码很简单，主要是创建div容器，然后通过JS引入地图到这个容器中，这里需要JS API版本在1.4.0以上，指定地图模式为3D，key值替换成自己应用的key值： 12345678910111213141516171819202122232425262728293031323334&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no, width=device-width&quot;&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css&quot; /&gt; &lt;style&gt; html, body, #container &#123; width: 100%; height: 100%; &#125; &lt;/style&gt; &lt;title&gt;地图加载完成&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;&lt;script src=&quot;https://webapi.amap.com/maps?v=1.4.13&amp;key=你的key值&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js&quot;&gt;&lt;/script&gt;&lt;script&gt; var map = map = new AMap.Map(&apos;container&apos;, &#123; resizeEnable: true, viewMode:&apos;3D&apos; &#125;); map.on(&quot;complete&quot;, function()&#123; log.success(&quot;地图加载完成！&quot;); &#125;);&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 6 浏览效果如图：]]></content>
       <tags>
-        <tag>ER图 数据库</tag>
+        <tag>JS 高德地图</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何利用IDEA上传项目到Github]]></title>
+    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F29%2FIDEA%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E5%88%B0Github%2F</url>
+    <content type="text"><![CDATA[第一种情况： 新的项目第一次推送到Github步骤：① 选择 share project on Github② 添加仓库名，添加描述③ 选择你要放到GitHub上的文件（大部分是选择你修改过的文件，但是本次我是第一次发布项目，所以全选）④ 显示上传成功⑤ 登录个人GitHub账号，查看项目 第二种情况：GitHub中已经有了项目，在IDEA中修改了项目中的代码，更新GitHub中的代码 ① 修改代码： 对于修改了的代码，IDEA会自动显示为不同颜色，比如新建的文件，文件名显示红色；修改了已有文件中的代码，被修改部分显示绿色② 修改完代码后，重新上传代码： 在项目上传的过程中，我们遵从添加到本地仓库–&gt;提交和推到远程仓库的步骤 A 添加到本地仓库： 右键项目名，选择Git,点击Add:添加项目到本地仓库，具体步骤如下图： 成功添加到本地仓库： B 提交并推送代码到远程仓库： 右键项目名，选择Git，点击Commit directory 具体操作如下： ③ 在个人GitHub中查看项目的更新情况 代码更新成功！！至此，关于使用IDEA上传代码的操作已经完成。]]></content>
+      <tags>
+        <tag>GitHub  IDEA</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[使用navicat为数据表添加外键]]></title>
-    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F26%2F%E4%BD%BF%E7%94%A8navicat%E4%B8%BA%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%B7%BB%E5%8A%A0%E5%A4%96%E9%94%AE%2F</url>
+    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F29%2F%E4%BD%BF%E7%94%A8navicat%E4%B8%BA%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%B7%BB%E5%8A%A0%E5%A4%96%E9%94%AE%2F</url>
     <content type="text"><![CDATA[1 选择需要操作的表，打开设计表。点击外键2 名（自动生成，无需添加） 字段（选择需要添加外键的字段） 参考模式（选择表所在的数据库） 参考表（关联表名） 参考字段（关联表的关联字段） 删除时（当删除关联表时，set null该字段置空） 更新时（当关联表更新时，该字段级联更新）3 外键设置完成]]></content>
       <tags>
         <tag>数据库</tag>
@@ -26,34 +42,18 @@
   </entry>
   <entry>
     <title><![CDATA[批量查询全过程]]></title>
-    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F25%2F%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B%EF%BC%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%89%2F</url>
+    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F29%2F%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B%EF%BC%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%89%2F</url>
     <content type="text"><![CDATA[具体步骤如下：1 controller层（查询开始的接口） ① 调用UserService查询用户列表 ② 调用RoleService查询当前用户所拥有的角色list123456789101112131415@RequestMapping(&quot;listUser&quot;) public String list(Model model) &#123; //查询用户 List&lt;User&gt; user = userService.list(); model.addAttribute(&quot;user&quot;, user); //用户角色对应map Map&lt;User, List&lt;Role&gt;&gt; user_roles = new HashMap&lt;&gt;(); for (User user : user) &#123; //获得当前用户所拥有的角色list List&lt;Role&gt; roles = roleService.listRoles(user); user_roles.put(user, roles); &#125; model.addAttribute(&quot;user_roles&quot;, user_roles); return &quot;listUser&quot;; &#125; 2 调用UserService查询用户，返回一个用户list，具体实现在它的实现层中，代码如下：① 调用UserMapper层从数据库进行查询123456789@Override public List&lt;User&gt; list() &#123; //相当于用户的一个工具类，设置查询结果list的排序规则 UserExample example = new UserExample(); //当前查询到的用户按降序排序 example.setOrderByClause(&quot;id desc&quot;); return userMapper.selectByExample(example); &#125; 3 UserMapper层的方法如下：返回一个用户list 1List&lt;User&gt; selectByExample(UserExample example); 4 UserMapper.xml具体如下： 123456789101112131415&lt;select id=&quot;selectByExample&quot; parameterType=&quot;com.how2java.pojo.UserExample&quot; resultMap=&quot;BaseResultMap&quot;&gt; select &lt;if test=&quot;distinct&quot;&gt; distinct &lt;/if&gt; &apos;false&apos; as QUERYID, &lt;include refid=&quot;Base_Column_List&quot; /&gt; from user &lt;if test=&quot;_parameter != null&quot;&gt; &lt;include refid=&quot;Example_Where_Clause&quot; /&gt; &lt;/if&gt; &lt;if test=&quot;orderByClause != null&quot;&gt; order by $&#123;orderByClause&#125; &lt;/if&gt; &lt;/select&gt;]]></content>
       <tags>
         <tag>批量查询</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[如何利用IDEA上传项目到Github]]></title>
-    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F25%2FLinux%2050%E6%9D%A1%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[1.ls -a 列出当前目录下的所有文件，包括以.头的隐含文件（如～/.bashrc） ls –l 列出当前目录下文件的详细信息 pwd 查看当前所在目录的绝对路经 cd 目录之间的移动 mkdir目录名 创建一个目录 rm 文件名 删除一个文件 cat文件名 查看文件内容（全屏查看） 7.more文件名 查看文件内容（可左右移动） less文件名查看文件内容（可上下左右移动） 9.mv 路径 文件名 把文件移动到路径下 mv文件名 文件名改名 grep字符文件名根据字符匹配来查看文件部分内容 find 路经 -name “字符串” 查找路经所在范围内满足字符串匹配的文件和目录 12.ln 源文件 链接名 创建源文件的硬链接 ln -s源文件 链接名创建源文件的软链接 13.touch 文件名 建立文件 14.df 显示文件系统的总容量，使用量，剩余量 15.du -b /home 查看目前/HOME目录的容量(k)及子目录的容量(k) fdisk -l 查看系统分区信息 mount -t 文件系统类型 设备路经 访问路经 18.chmod *** 文件名 改文件的写读执行权限 19.diff 文件名 文件名 比较文件 20.top 动态 ps –aux 静态 pstree 进程树查看系统进程 程序名 &amp; 后台运行程序 fg 把后台运行的进程调回前台 bg 把前台运行进程调到后台 halt init 0 shutdown –h now 关闭系统 reboot init 6 重启系统 init [0123456] 改变系统运行级,7种 at at 5pm + 3 days /bin/ls 指定三天后下午5:00执行/bin/ls crontab 周期性任务命令（建议详细学习） 27.date 显示日期的命令 28.cal 显示日历的命令 29.bc 不错的简单计算器 30.man 命令 查询命令帮助 31.which 查看可执行档案的位置 32.whereis 查看档案的位置 33.locate 配合数据库查看档案位置 34.gzip bzip2 compress 压缩，解压命令 35.vi 文件名 用VI编辑文件 36.alias 命令别名设置指令 unalias 释放别名 37.tar 打包 解包指令 38.head 显示文件的头几行 tail 显示文件的后几行 39.| 管道 &gt; 重定向 40.od 以二进制形式读取档案的内容 41.su 登入超级管理员 sudo 以管理者身份执行命令 42.tar包安装指令 ./configure –prefix=/usr/local 编译前的配置 make 编译 make install 安装编译好的源码包 43.rpm –参数 rpm的安装 查询 删除 升级等 44.ifconfig 网络配置命令 ping ping目标主机 netstat 显示监听端口及进程 45.clear 清屏 46.useradd 加用户 47.passwd 修改密码 48.chgrp chown 修改文件的用户组所有者 49.dd 用来备份的指令 dd if=”input-file” of=”output-file” 50.sh 脚本文件 执行脚本文件]]></content>
+    <title><![CDATA[使用Navicat premium 12画ER图的几种操作方法]]></title>
+    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F29%2F%E4%BD%BF%E7%94%A8Navicat%20premium%2012%E7%94%BBER%E5%9B%BE%E7%9A%84%E5%87%A0%E7%A7%8D%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[最近接触的关系数据库类型比较多，所以用上了 Navicat Premium。这个工具真的很强大，可以连接大多数关系数据库。再也不用来回切换数据库连接工具了。同时这个工具可以直接直观的查看几个表的ER图，即关联关系，便于设计模型。言归正传介绍方法。实验工具为 Navicat ，具体操作如下： 第一种： 1 模型–&gt; 新建模型2 选择相应的数据库名称和数据库版本，点击确定 如下：3 点击工具–&gt;从数据库导入，选择你需要建立关系的数据表，点击开始4 生成ER图，如下： 第二种：1 选择目标数据库名或者具体的某一张数据表，右键单击，选择逆向表到模型（选择的是userinfo表） 2 点击工具–&gt;从数据库导入，选择你需要建立关系的数据表，点击开始3 生成ER图，如下：]]></content>
       <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[如何利用IDEA上传项目到Github]]></title>
-    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F25%2FIDEA%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E5%88%B0Github%2F</url>
-    <content type="text"><![CDATA[第一种情况： 新的项目第一次推送到Github步骤：① 选择 share project on Github② 添加仓库名，添加描述③ 选择你要放到GitHub上的文件（大部分是选择你修改过的文件，但是本次我是第一次发布项目，所以全选）④ 显示上传成功⑤ 登录个人GitHub账号，查看项目 第二种情况：GitHub中已经有了项目，在IDEA中修改了项目中的代码，更新GitHub中的代码 ① 修改代码： 对于修改了的代码，IDEA会自动显示为不同颜色，比如新建的文件，文件名显示红色；修改了已有文件中的代码，被修改部分显示绿色② 修改完代码后，重新上传代码： 在项目上传的过程中，我们遵从添加到本地仓库–&gt;提交和推到远程仓库的步骤 A 添加到本地仓库： 右键项目名，选择Git,点击Add:添加项目到本地仓库，具体步骤如下图： 成功添加到本地仓库： B 提交并推送代码到远程仓库： 右键项目名，选择Git，点击Commit directory 具体操作如下： ③ 在个人GitHub中查看项目的更新情况 代码更新成功！！至此，关于使用IDEA上传代码的操作已经完成。]]></content>
-      <tags>
-        <tag>GitHub  IDEA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[HTML文件怎么引入高德地图]]></title>
-    <url>%2Fkyrietxma.github.io%2F2019%2F03%2F25%2FHTML%E6%96%87%E4%BB%B6%E6%80%8E%E4%B9%88%E5%BC%95%E5%85%A5%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%2F</url>
-    <content type="text"><![CDATA[1.首先，注册高德地图开发者，这个直接在官网上注册，输入必要信息就行，如下：2.注册完成后，进入个人中心，依次点击“应用管理”-&gt;“我的应用”-&gt;“创建新应用”，如下，这里输入应用名称，选择类型就行： 3 接着就需要为应用添加key值，点击右上角的+号，就会弹出添加窗口，这里我们选择“Web端（JS API）”，如下：4 添加key值成功后，就会在应用列表中看到刚才添加的key值，如下，后面的代码中需要用到这个key值：5.最后就是编写代码，在html页面中引入3D地图了，如下，代码很简单，主要是创建div容器，然后通过JS引入地图到这个容器中，这里需要JS API版本在1.4.0以上，指定地图模式为3D，key值替换成自己应用的key值： 12345678910111213141516171819202122232425262728293031323334&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no, width=device-width&quot;&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css&quot; /&gt; &lt;style&gt; html, body, #container &#123; width: 100%; height: 100%; &#125; &lt;/style&gt; &lt;title&gt;地图加载完成&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;&lt;script src=&quot;https://webapi.amap.com/maps?v=1.4.13&amp;key=你的key值&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js&quot;&gt;&lt;/script&gt;&lt;script&gt; var map = map = new AMap.Map(&apos;container&apos;, &#123; resizeEnable: true, viewMode:&apos;3D&apos; &#125;); map.on(&quot;complete&quot;, function()&#123; log.success(&quot;地图加载完成！&quot;); &#125;);&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 6 浏览效果如图：]]></content>
-      <tags>
-        <tag>JS 高德地图</tag>
+        <tag>ER图 数据库</tag>
       </tags>
   </entry>
   <entry>

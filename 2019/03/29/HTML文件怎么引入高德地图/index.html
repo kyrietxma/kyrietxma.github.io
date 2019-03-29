@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="en">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="数据库,">
+  <meta name="keywords" content="JS 高德地图,">
 
 
 
@@ -125,21 +125,24 @@
 
 
 
-<meta name="description" content="1 选择需要操作的表，打开设计表。点击外键2 名（自动生成，无需添加）   字段（选择需要添加外键的字段）   参考模式（选择表所在的数据库）   参考表（关联表名）   参考字段（关联表的关联字段）   删除时（当删除关联表时，set null该字段置空）   更新时（当关联表更新时，该字段级联更新）3 外键设置完成">
-<meta name="keywords" content="数据库">
+<meta name="description" content="1.首先，注册高德地图开发者，这个直接在官网上注册，输入必要信息就行，如下：2.注册完成后，进入个人中心，依次点击“应用管理”-&amp;gt;“我的应用”-&amp;gt;“创建新应用”，如下，这里输入应用名称，选择类型就行： 3 接着就需要为应用添加key值，点击右上角的+号，就会弹出添加窗口，这里我们选择“Web端（JS API）”，如下：4 添加key值成功后，就会在应用列表中看到刚才添加的key值，如下">
+<meta name="keywords" content="JS 高德地图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用navicat为数据表添加外键">
-<meta property="og:url" content="https://github.com/kyrietxma/kyrietxma.github.io/2019/03/26/使用navicat为数据表添加外键/index.html">
+<meta property="og:title" content="HTML文件怎么引入高德地图">
+<meta property="og:url" content="https://github.com/kyrietxma/kyrietxma.github.io/2019/03/29/HTML文件怎么引入高德地图/index.html">
 <meta property="og:site_name" content="kyrie.德鲁大叔">
-<meta property="og:description" content="1 选择需要操作的表，打开设计表。点击外键2 名（自动生成，无需添加）   字段（选择需要添加外键的字段）   参考模式（选择表所在的数据库）   参考表（关联表名）   参考字段（关联表的关联字段）   删除时（当删除关联表时，set null该字段置空）   更新时（当关联表更新时，该字段级联更新）3 外键设置完成">
-<meta property="og:locale" content="en">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2019032621154881.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190326211828565.png">
-<meta property="og:updated_time" content="2019-03-26T14:02:53.758Z">
+<meta property="og:description" content="1.首先，注册高德地图开发者，这个直接在官网上注册，输入必要信息就行，如下：2.注册完成后，进入个人中心，依次点击“应用管理”-&amp;gt;“我的应用”-&amp;gt;“创建新应用”，如下，这里输入应用名称，选择类型就行： 3 接着就需要为应用添加key值，点击右上角的+号，就会弹出添加窗口，这里我们选择“Web端（JS API）”，如下：4 添加key值成功后，就会在应用列表中看到刚才添加的key值，如下">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190314055509733.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019031405571790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019031405574890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190314055818185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190314060242123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-03-29T06:24:21.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用navicat为数据表添加外键">
-<meta name="twitter:description" content="1 选择需要操作的表，打开设计表。点击外键2 名（自动生成，无需添加）   字段（选择需要添加外键的字段）   参考模式（选择表所在的数据库）   参考表（关联表名）   参考字段（关联表的关联字段）   删除时（当删除关联表时，set null该字段置空）   更新时（当关联表更新时，该字段级联更新）3 外键设置完成">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2019032621154881.png">
+<meta name="twitter:title" content="HTML文件怎么引入高德地图">
+<meta name="twitter:description" content="1.首先，注册高德地图开发者，这个直接在官网上注册，输入必要信息就行，如下：2.注册完成后，进入个人中心，依次点击“应用管理”-&amp;gt;“我的应用”-&amp;gt;“创建新应用”，如下，这里输入应用名称，选择类型就行： 3 接着就需要为应用添加key值，点击右上角的+号，就会弹出添加窗口，这里我们选择“Web端（JS API）”，如下：4 添加key值成功后，就会在应用列表中看到刚才添加的key值，如下">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190314055509733.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70">
 
 
 
@@ -169,13 +172,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/kyrietxma/kyrietxma.github.io/2019/03/26/使用navicat为数据表添加外键/">
+  <link rel="canonical" href="https://github.com/kyrietxma/kyrietxma.github.io/2019/03/29/HTML文件怎么引入高德地图/">
 
 
 
 
 
-  <title>使用navicat为数据表添加外键 | kyrie.德鲁大叔</title>
+  <title>HTML文件怎么引入高德地图 | kyrie.德鲁大叔</title>
   
 
 
@@ -187,7 +190,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -230,32 +233,32 @@
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-主题">
+        <li class="menu-item menu-item-主页">
           <a href="/kyrietxma.github.io/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            主题
+            主页
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-归档">
           <a href="/kyrietxma.github.io/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
-            Archives
+            归档
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-关于">
           <a href="/kyrietxma.github.io/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-about"></i> <br>
             
-            About
+            关于
           </a>
         </li>
       
@@ -326,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/kyrietxma/kyrietxma.github.io/kyrietxma.github.io/2019/03/26/使用navicat为数据表添加外键/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/kyrietxma/kyrietxma.github.io/kyrietxma.github.io/2019/03/29/HTML文件怎么引入高德地图/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kyriematx">
@@ -343,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用navicat为数据表添加外键</h1>
+          <h1 class="post-title" itemprop="name headline">HTML文件怎么引入高德地图</h1>
         
 
         <div class="post-meta">
@@ -355,8 +358,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-26T22:02:53+08:00">
-                2019-03-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-29T14:24:21+08:00">
+                2019-03-29
               </time>
             
 
@@ -392,7 +395,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  114
+                  458
                 </span>
               
 
@@ -408,7 +411,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -429,7 +432,10 @@
       
 
       
-        <p>1 <strong>选择需要操作的表，打开设计表。点击外键</strong><br><img src="https://img-blog.csdnimg.cn/2019032621154881.png" alt="设计表--&gt;外键"><br>2 名（自动生成，无需添加）<br>   字段（选择需要添加外键的字段）<br>   参考模式（选择表所在的数据库）<br>   参考表（关联表名）<br>   参考字段（关联表的关联字段）<br>   删除时（当删除关联表时，set null该字段置空）<br>   更新时（当关联表更新时，该字段级联更新）<br><img src="https://img-blog.csdnimg.cn/20190326211828565.png" alt="具体设计外键详细信息"><br>3 <strong>外键设置完成</strong></p>
+        <p>1.首先，注册高德地图开发者，这个直接在官网上注册，输入必要信息就行，如下：<br><img src="https://img-blog.csdnimg.cn/20190314055509733.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>2.注册完成后，进入个人中心，依次点击“应用管理”-&gt;“我的应用”-&gt;“创建新应用”，如下，这里输入应用名称，选择类型就行：</p>
+<p><img src="https://img-blog.csdnimg.cn/2019031405571790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3 接着就需要为应用添加key值，点击右上角的+号，就会弹出添加窗口，这里我们选择“Web端（JS API）”，如下：<br><img src="https://img-blog.csdnimg.cn/2019031405574890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>4 添加key值成功后，就会在应用列表中看到刚才添加的key值，如下，后面的代码中需要用到这个key值：<br><img src="https://img-blog.csdnimg.cn/20190314055818185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>5.最后就是编写代码，在html页面中引入3D地图了，如下，代码很简单，主要是创建div容器，然后通过JS引入地图到这个容器中，这里需要JS API版本在1.4.0以上，指定地图模式为3D，key值替换成自己应用的key值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no, width=device-width&quot;&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css&quot; /&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        html,</span><br><span class="line">        body,</span><br><span class="line">        #container &#123;</span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 100%;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;title&gt;地图加载完成&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;script src=&quot;https://webapi.amap.com/maps?v=1.4.13&amp;key=你的key值&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var map = map = new AMap.Map(&apos;container&apos;, &#123;</span><br><span class="line">        resizeEnable: true,</span><br><span class="line">        viewMode:&apos;3D&apos;</span><br><span class="line">    &#125;);</span><br><span class="line">    map.on(&quot;complete&quot;, function()&#123;</span><br><span class="line">        log.success(&quot;地图加载完成！&quot;);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>6 浏览效果如图：<br><img src="https://img-blog.csdnimg.cn/20190314060242123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
       
     </div>
@@ -484,7 +490,7 @@
       
         <div class="post-tags">
           
-            <a href="/kyrietxma.github.io/tags/数据库/" rel="tag"># 数据库</a>
+            <a href="/kyrietxma.github.io/tags/JS-高德地图/" rel="tag"># JS 高德地图</a>
           
         </div>
       
@@ -497,8 +503,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/kyrietxma.github.io/2019/03/25/批量查询的全过程（学习笔记）/" rel="next" title="批量查询全过程">
-                <i class="fa fa-chevron-left"></i> 批量查询全过程
+              <a href="/kyrietxma.github.io/2019/03/29/IDEA上传项目到Github/" rel="next" title="如何利用IDEA上传项目到Github">
+                <i class="fa fa-chevron-left"></i> 如何利用IDEA上传项目到Github
               </a>
             
           </div>
@@ -507,8 +513,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/kyrietxma.github.io/2019/03/26/使用Navicat premium 12画ER图的几种操作方法/" rel="prev" title="使用Navicat premium 12画ER图的几种操作方法">
-                使用Navicat premium 12画ER图的几种操作方法 <i class="fa fa-chevron-right"></i>
+              <a href="/kyrietxma.github.io/2019/03/29/IntelliJ IDEA下载安装配置教程（自用配置）/" rel="prev" title="IntelliJ IDEA下载安装配置教程（自用配置）">
+                IntelliJ IDEA下载安装配置教程（自用配置） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -576,7 +582,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/kyrietxma.github.io/archives/">
+                <a href="/kyrietxma.github.io/archives">
               
                   <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
