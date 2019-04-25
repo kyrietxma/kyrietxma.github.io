@@ -40,6 +40,29 @@
   </entry>
   
   <entry>
+    <title>关于mybatis异常 invalid comparison_ java.util.Date and java.lang.String  的解决方法</title>
+    <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/04/25/%E5%85%B3%E4%BA%8Emybatis%E5%BC%82%E5%B8%B8%20invalid%20comparison_%20java.util.Date%20and%20java.lang.String%20%20%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/04/25/关于mybatis异常 invalid comparison_ java.util.Date and java.lang.String  的解决方法/</id>
+    <published>2019-04-25T02:33:00.696Z</published>
+    <updated>2019-04-25T02:58:37.857Z</updated>
+    
+    <content type="html"><![CDATA[<p> <strong>1</strong><br> 报错信息：如下图<br><img src="https://img-blog.csdnimg.cn/20190425095804384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="报错信息"><br>网上查了很多大家的解决方法，发现总没有一个可以解决自己的问题的，花费了好久终于发现原来是mybatis的版本问题。<br><strong>2<br>原因：</strong><br>在mybatis 3.3.0，对于时间参数进行比较时的一个bug. 如果拿传入的时间类型参数与空字符串’’进行对比判断则会引发异常. 所以在上面的代码中去该该判断, 只保留非空判断就可以了。<br><strong>3<br>解决方法：</strong><br>在mapper.xml中去掉对于字符串为空的判读  即：去掉 字段名 != ‘’的判断</p><p><strong>错误的mapper文件如下：</strong><br><img src="https://img-blog.csdnimg.cn/20190425100500823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="错误的mapper文件"></p><p><strong>修改后，正确的mapper文件：</strong><br><img src="https://img-blog.csdnimg.cn/2019042510070533.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQzNTg0MDE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>完美解决！！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt; &lt;strong&gt;1&lt;/strong&gt;&lt;br&gt; 报错信息：如下图&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20190425095804384.png?x-oss-process=image/watermark,type_ZmFuZ3
+      
+    
+    </summary>
+    
+    
+      <category term="个人学习笔记" scheme="https://github.com/kyrietxma/kyrietxma.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用navicat为数据表添加外键</title>
     <link href="https://github.com/kyrietxma/kyrietxma.github.io/2019/04/25/%E4%BD%BF%E7%94%A8navicat%E4%B8%BA%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%B7%BB%E5%8A%A0%E5%A4%96%E9%94%AE/"/>
     <id>https://github.com/kyrietxma/kyrietxma.github.io/2019/04/25/使用navicat为数据表添加外键/</id>
