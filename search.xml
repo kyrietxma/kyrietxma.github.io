@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[文章图片]]></title>
+    <url>%2Fkyrietxma.github.io%2F2019%2F04%2F25%2F%E6%96%87%E7%AB%A0%E5%9B%BE%E7%89%87%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[批量查询全过程]]></title>
     <url>%2Fkyrietxma.github.io%2F2019%2F04%2F25%2F%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B%EF%BC%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%89%2F</url>
     <content type="text"><![CDATA[具体步骤如下：1 controller层（查询开始的接口） ① 调用UserService查询用户列表 ② 调用RoleService查询当前用户所拥有的角色list123456789101112131415@RequestMapping(&quot;listUser&quot;) public String list(Model model) &#123; //查询用户 List&lt;User&gt; user = userService.list(); model.addAttribute(&quot;user&quot;, user); //用户角色对应map Map&lt;User, List&lt;Role&gt;&gt; user_roles = new HashMap&lt;&gt;(); for (User user : user) &#123; //获得当前用户所拥有的角色list List&lt;Role&gt; roles = roleService.listRoles(user); user_roles.put(user, roles); &#125; model.addAttribute(&quot;user_roles&quot;, user_roles); return &quot;listUser&quot;; &#125; 2 调用UserService查询用户，返回一个用户list，具体实现在它的实现层中，代码如下：① 调用UserMapper层从数据库进行查询123456789@Override public List&lt;User&gt; list() &#123; //相当于用户的一个工具类，设置查询结果list的排序规则 UserExample example = new UserExample(); //当前查询到的用户按降序排序 example.setOrderByClause(&quot;id desc&quot;); return userMapper.selectByExample(example); &#125; 3 UserMapper层的方法如下：返回一个用户list 1List&lt;User&gt; selectByExample(UserExample example); 4 UserMapper.xml具体如下： 123456789101112131415&lt;select id=&quot;selectByExample&quot; parameterType=&quot;com.how2java.pojo.UserExample&quot; resultMap=&quot;BaseResultMap&quot;&gt; select &lt;if test=&quot;distinct&quot;&gt; distinct &lt;/if&gt; &apos;false&apos; as QUERYID, &lt;include refid=&quot;Base_Column_List&quot; /&gt; from user &lt;if test=&quot;_parameter != null&quot;&gt; &lt;include refid=&quot;Example_Where_Clause&quot; /&gt; &lt;/if&gt; &lt;if test=&quot;orderByClause != null&quot;&gt; order by $&#123;orderByClause&#125; &lt;/if&gt; &lt;/select&gt;]]></content>
